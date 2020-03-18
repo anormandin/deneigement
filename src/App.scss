@@ -1,0 +1,16 @@
+@import '../vars';
+
+.cardGroup {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-neutral-dark;
+  height: 100vh;
+  justify-content: center;
+  padding: 3em;
+
+}
+
+.App {
+  height: 100vh;
+  background-color: $color-neutral-light;
+}

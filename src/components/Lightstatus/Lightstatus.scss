@@ -1,0 +1,61 @@
+// .Lightstatus {
+// }
+
+@import '../../../vars';
+
+.ui.card {
+    background-color: $color-primary-light;
+    // border-color: $color-neutral-light;
+    min-height:200px;
+
+    .header {
+        background-color: $color-primary-dark;
+        color:$color-primary-light;
+        padding:1em 20px;
+        font-size: 1.5em;
+    }
+
+    .content {
+        color:$color-primary-light;
+        background-color: lighten($color-primary-dark, 10%);
+        padding:0.5em 20px;
+    }
+}
+
+.img_back {
+    width: 70px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+.img_on {
+    width:45px;
+    position: absolute;
+    right:15px;
+    top:22px;
+    opacity: 0;
+   
+    
+}
+
+
+.ui.card.forbidden {
+    .img_on {
+        animation-name: flashing;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes flashing {
+    from{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
